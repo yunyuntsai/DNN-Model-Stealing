@@ -1,0 +1,16 @@
+net: "/home/exx/Documents/pretrain_networks/VGG19/VGG_ILSVRC_19_layers_train_val.prototxt"
+test_iter: 915
+test_interval: 1000
+# lr for fine-tuning should be lower than when starting from scratch
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+# decrease lr each 20000 iterations
+stepsize: 1000
+display: 100
+max_iter: 3000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "/home/exx/Documents/pretrain_networks/VGG19/featurefool_retrained_caffe_model2150_transferalxnet/"
+solver_mode: GPU
